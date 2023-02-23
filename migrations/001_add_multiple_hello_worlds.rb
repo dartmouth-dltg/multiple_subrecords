@@ -3,7 +3,7 @@ require 'db/migrations/utils'
 Sequel.migration do
 
   up do
-    $stderr.puts("Adding Mutliple Hello World Subrecord tables")
+    $stderr.puts("Adding Multiple Hello World Subrecord tables")
 
     create_table(:multi_hello_world_one) do
       primary_key :id

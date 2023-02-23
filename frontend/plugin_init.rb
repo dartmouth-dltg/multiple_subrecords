@@ -1,8 +1,8 @@
-Plugins::extend_aspace_routes(File.join(File.dirname(__FILE__), "routes.rb"))
+ArchivesSpace::Application.extend_aspace_routes(File.join(File.dirname(__FILE__), "routes.rb"))
 
 ArchivesSpace::Application.config.after_initialize do
 
-  module Plugins
+  Plugins.module_eval do
 
     def self.init
       @config = {:system_menu_items => [], :repository_menu_items => [], :plugin => {}, :parents => {}}
@@ -42,13 +42,12 @@ ArchivesSpace::Application.config.after_initialize do
 
       @note_types_handlers = []
     end
-    
   end
 
 end
   
 Rails.application.config.after_initialize do
-  module PluginHelper
+  PluginHelper.module_eval do
 
     def sidebar_plugins_for(record)
       result = ''
@@ -187,4 +186,3 @@ Rails.application.config.after_initialize do
 
   end
 end
-  
