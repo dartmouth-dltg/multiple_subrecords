@@ -1,0 +1,18 @@
+repository_menu_controller: multi_hello_world_one, multi_hello_world_two
+no_automatic_routes: true
+parents:
+  accession:
+    name: multi_hello_world_one, multi_hello_world_two
+    cardinality: zero_to_many, zero_to_many
+  archival_object:
+    name: multi_hello_world_one, multi_hello_world_two
+    cardinality: zero_to_many, zero_to_many
+  resource:
+    name: multi_hello_world_one, multi_hello_world_two
+    cardinality: zero_to_many
+  digital_object:
+    name: multi_hello_world_one
+    cardinality: zero_to_many
+  digital_object_component:
+    name: multi_hello_world_one
+    cardinality: zero_to_many, zero_to_many

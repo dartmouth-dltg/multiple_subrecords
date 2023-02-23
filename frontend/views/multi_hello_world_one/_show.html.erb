@@ -1,0 +1,16 @@
+<%
+   section_id = "multi_hello_world_ones" if section_id.blank?
+%>
+<section id="<%= section_id %>" class="subrecord-form-dummy">
+  <h3><%= I18n.t("plugins.multi_hello_world_one._plural") %></h3>
+  <%= readonly_context :multi_hello_world_one do |readonly| %>
+    <div class="subrecord-form-container">
+      <%= readonly.list_for(multi_hello_world_ones, "multi_hello_world_ones[]") do |mhw, index| %>
+        <h4><%= I18n.t("plugins.multi_hello_world_one_title._singular") %></h4>
+        <div class="subrecord-form-fields">
+          <%= readonly.label_and_textfield "description" %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</section>

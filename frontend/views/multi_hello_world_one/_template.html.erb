@@ -1,0 +1,5 @@
+<% define_template "multi_hello_world_one", jsonmodel_definition(:multi_hello_world_one) do |form| %>
+  <div class="subrecord-form-fields">
+    <%= form.label_and_textarea("description", {:field_opts => {:class => "mixed-content"}}) %>
+  </div>
+<% end %>
