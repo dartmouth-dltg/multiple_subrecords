@@ -6,30 +6,30 @@ This plugin is a proof of concept to see if we can modify core to allow
 plugins to define multiple subrecords.
 
 It allows a plugin to define multiple subrecords - specifically in the 
-`cinfig.yml` file. It assumes that multiple entries are comman separated
+`config.yml` file. It assumes that multiple entries are comman separated
 and.
 
 ### Example config
 
 ```
-     repository_menu_controller: multi_hello_world_ones, multi_hello_world_twos
-     no_automatic_routes: true
-     parents:
-          accession:
-               name: multi_hello_world_ones, multi_hello_world_twos
-               cardinality: zero_to_many, zero_to_many
-     archival_object:
-               name: multi_hello_world_ones, multi_hello_world_twos
-               cardinality: zero_to_many, zero_to_many
-     resource:
-               name: multi_hello_world_ones, multi_hello_world_twos
-               cardinality: zero_to_many
-     digital_object:
-               name: multi_hello_world_ones
-               cardinality: zero_to_many
-     digital_object_component:
-               name: multi_hello_world_twos
-               cardinality: zero_to_many, zero_to_many
+repository_menu_controller: multi_hello_world_ones, multi_hello_world_twos
+no_automatic_routes: true
+parents:
+     accession:
+          name: multi_hello_world_ones, multi_hello_world_twos
+          cardinality: zero_to_many, zero_to_many
+archival_object:
+          name: multi_hello_world_ones, multi_hello_world_twos
+          cardinality: zero_to_many, zero_to_many
+resource:
+          name: multi_hello_world_ones, multi_hello_world_twos
+          cardinality: zero_to_many
+digital_object:
+          name: multi_hello_world_ones
+          cardinality: zero_to_many
+digital_object_component:
+          name: multi_hello_world_twos
+          cardinality: zero_to_many, zero_to_many
 ```
 
 ## Getting started
@@ -70,7 +70,7 @@ This will create the tables required by the plugin.
 You will need to place the following code block in  your config file *before* `AppConfig[:plugins]`
 
 ```
-     module Plugins
+module Plugins
 
      def self.init
      @config = {:system_menu_items => [], :repository_menu_items => [], :plugin => {}, :parents => {}}
@@ -114,7 +114,7 @@ You will need to place the following code block in  your config file *before* `A
      @note_types_handlers = []
      end
 
-     end
+end
 ```
 
 See `frontend/plugin_init.rb` for overrides to `PluginHelper` methods
