@@ -1,0 +1,28 @@
+en:
+  plugins:
+    multi_hello_world_ones:
+      _plural: Multi Hello Ones
+      _singular: Multi Hello One
+      label: Multi Hello Ones
+    multi_hello_world_one:
+      _plural: Multi Hello Ones
+      _singular: Multi Hello One
+      _frontend:
+        action:
+          add: Add a Multi Hello World One
+    multi_hello_world_twos:
+      _plural: Multi Hello Twos
+      _singular: Multi Hello Two
+      label: Multi Hello Twos
+    multi_hello_world_two:
+      _plural: Multi Hello Twos
+      _singular: Multi Hello Two
+      _frontend:
+        action:
+          add: Add a Multi Hello World Two
+
+  multi_hello_world_one:
+    description: Description
+
+  multi_hello_world_two:
+    description: Description
